@@ -1,5 +1,9 @@
 version: '3'
 
+networks:
+  base:
+    driver: bridge
+
 services:
   telegramBot:
     container_name: telegrambot
@@ -8,3 +12,5 @@ services:
       - ./public:/var/www/html/
     ports:
       - 8200:80
+    networks:
+      - base
