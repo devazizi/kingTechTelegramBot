@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  telegramBot:
+    container_name: telegrambot
+    image: php:8.0-apache
+    volumes:
+      - ./public:/var/www/html/
+    ports:
+      - 8200:80
