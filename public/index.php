@@ -9,7 +9,7 @@ $result = json_decode($json);
 
 $bootId = bootId();
 
-$chatId = $result->message->chat->id;
-$message = $result->message->text;
+$chatId = "$result->message->chat->id";
+$message = "$result->message->text";
 
-file_get_contents("https://api.telegram.org/bot{$chatId}/sendmessage?text=سلام چطوری&chat_id={$chatId}");
+file_get_contents("https://api.telegram.org/bot{$bootId}/sendmessage?text=سلام چطوری&chat_id={$chatId}");
